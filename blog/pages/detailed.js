@@ -34,7 +34,7 @@ const Detailed = (props)=> {
   })
 
   let html = marked(props.article_content);
-
+  console.log(props.typeId);
   return (
     <div>
       <Head>
@@ -43,25 +43,25 @@ const Detailed = (props)=> {
       </Head>
       <Header />
       <Row className="comm-main" type="flex" justify="center">
-        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}>
+        <Col className="comm-white" xs={24} sm={24} md={16} lg={18} xl={14}>
           <div>
             <div className="bread-div">
               <Breadcrumb>
                 <Breadcrumb.Item><a href="/">首页</a></Breadcrumb.Item>
-                <Breadcrumb.Item><a href="/">视频列表</a></Breadcrumb.Item>
+                <Breadcrumb.Item><a href={'/list?id='+props.typeId}>{props.typeName}</a></Breadcrumb.Item>
                 <Breadcrumb.Item>xxxx</Breadcrumb.Item>
               </Breadcrumb>
             </div>
             <div>
               <div className="detailed-title">
-                React实战视频教程-技术胖Blog开发（更新第10集）
+                {props.title}
               </div>
               <div className="list-icon center">
-                <span><Icon type="calendar" />2019-06-28</span>
-                <span><Icon type="folder" />视频教程</span>
-                <span><Icon type="fire" />5495人</span>
+                <span><Icon type="calendar" />{props.addTime}</span>
+                
+                
               </div>
-              <div className="detailed-content" dangerouslySetInnerHTML={{__html:html}}>
+              <div className="detailed-content" dangerouslySetInnerHTML={{__html:html}} >
                 
               </div>
             </div>
@@ -69,12 +69,12 @@ const Detailed = (props)=> {
         </Col>
         <Col className="comm-right" xs={24} sm={24} md={7} lg={5} xl={4}>
           <Author />
-          <Affix offsetTop={10}>
+          <Affix offsetTop={50}>
             <div className="detailed-nav comm-box">
               <div className="nav-title">文章目录</div>
               <MarkNav 
                 className="article-menu"
-                source={html}
+                source={props.article_content}
                 headingTopOffset={0}
                 ordered={false}
               />
@@ -93,7 +93,7 @@ Detailed.getInitialProps = async(context)=>{
   const promise = new Promise((resolve)=>{
     axios(servicePath.getArticleById+id).then(
       (res)=>{
-        console.log(res)
+        
         resolve(res.data.data[0])
       }
     )
