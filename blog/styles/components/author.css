@@ -1,18 +1,31 @@
 .author-div{
     text-align: center;
     padding: 1rem;
+    margin-top: 1rem;
 
 }
 .author-div div{
     margin-bottom: 1rem;
+    
 
+}
+.author-avatar{
+    font-size: 1rem;
 }
 .author-introduction{
     font-size:.8rem;
     color: #999;
+    margin-top: 1rem;
 }
 .account{
     background-color: #999;
     margin-left: .5rem;
     margin-right: .5rem;
+}
+.avatar-tag{
+    margin: .5rem;
+}
+.my-avatar{
+    border-radius: 50%;
+    
 }
