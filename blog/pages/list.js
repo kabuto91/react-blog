@@ -26,7 +26,7 @@ const  MyList = (list)=> {
       </Head>
       <Header />
       <Row className="comm-main" type="flex" justify="center">
-        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}>
+        <Col className="comm-white" xs={24} sm={24} md={16} lg={18} xl={14}>
 
           <div className="bread-div">
             <Breadcrumb>
@@ -34,7 +34,7 @@ const  MyList = (list)=> {
                 <a href="/">首页</a>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
-                视频教程
+                {list.data[0].typeName}
               </Breadcrumb.Item>
               
             </Breadcrumb>
@@ -53,8 +53,7 @@ const  MyList = (list)=> {
                 </div>
                 <div className="list-icon">
                   <span><Icon type="calendar" /> {item.addTime}</span>
-                  <span><Icon type="folder" /> {item.typeName}</span>
-                  <span><Icon type="fire" /> {item.view_count}人</span>
+                  
                 </div>
                 <div className="list-context">
                   {item.introduce}
