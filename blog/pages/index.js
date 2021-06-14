@@ -42,12 +42,15 @@ const Home = ({article, article2, article3}) => {
     useEffect(()=>{
         const fetchData = async ()=>{
             const count = await axios(servicePath.getArticleCount).then((res)=>{
-                return res.data.Counts;
+              
+                return res.data.counts;
             })
             setCount(count);
         }
         fetchData()
     },[])
+
+   
 
   return (
     <div>
