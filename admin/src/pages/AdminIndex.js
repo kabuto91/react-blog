@@ -5,7 +5,7 @@ import {  Route } from 'react-router-dom';
 import AddArticle from './AddArticle';
 import ArticleList from './ArticleList';
 
-const { Header, Content, Footer, Sider } = Layout;
+const {  Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 function AdminIndex(props) {
