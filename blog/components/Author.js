@@ -1,17 +1,25 @@
-import {Avatar, Divider, Icon} from 'antd';
+import {Avatar, Divider, Icon, Tag} from 'antd';
 import '../styles/components/author.css';
+import Image from 'next/image';
 
 
 const Author = () =>{
     return (
         <div className="author-div comm-box">
-            <div><Avatar size={100} src="https://blogimages.jspang.com/blogtouxiang1.jpg" /></div>
+            <Image src="/img/background2.png" width={100} height={80} className="my-avatar" />
             <div className="author-introduction">
-                因为美好的东西都是免费的，比如水、阳光和空气，所以本站视频全部免费。
+                <Tag color="red" className="avatar-tag">职业新手</Tag>
+                <Tag color="blue" className="avatar-tag">啥都不会</Tag>
+                <Tag color="green" className="avatar-tag">会积极学习的</Tag>
+                
                 <Divider>社交账号</Divider>
-                <Avatar size={28} icon={<Icon type="github" />} className="account" />
-                <Avatar size={28} icon={<Icon type="qq" />} className="account" />
-                <Avatar size={28} icon={<Icon type="wechat" />} className="account" />
+                
+                <div className="author-avatar">
+                    <Icon type="github"  />    kabuto91
+                </div>
+                <div className="author-avatar">
+                    <Icon type="mail"  />    1034450752@qq.com
+                </div>
             </div>
         </div>
     )
