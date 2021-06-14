@@ -13,18 +13,20 @@
 
 }
 .header-txt{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: #999;
     display: inline-block;
     padding-left: 0.3rem;
 }
+
 .ant-meu{
     line-height: 2.8rem;
 
 }
 .ant-menu-item{
-    font-size:.7rem !important;
+    font-size:.8rem !important;
     padding-left:1rem;
     padding-right:1rem;
 
 }
+
