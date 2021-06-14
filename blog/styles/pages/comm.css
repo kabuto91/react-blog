@@ -1,21 +1,26 @@
 body{
-    background-color: #f6f6f6;  
+    background-color: #fefff0ad;  
   }
   
   .comm-left{
-    background-color: #FFF;
+    background-color: #fefff0ad;
     padding:.3rem;
     border-radius: .3rem;
-    border:1px solid #eee;
+    
   }
   .comm-box{
     background-color: #FFF;
     margin-left: .5rem;
-    padding:.3rem;
+    padding:.8rem;
     border-radius: .3rem;
     border:1px solid #eee;
   
   
+  }
+  .comm-white{
+    background-color: #FFF;
+    padding:.3rem;
+    border-radius: .3rem;
   }
   .comm-main{
     margin-top: .5rem;
@@ -36,4 +41,27 @@ body{
 .list-icon span{
     display: inline-block;
     padding: 0 10px;
+}
+.index-box{
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+.bread-div{
+  padding: .5rem;
+  border-bottom:1px solid #eee;
+  background-color: #e1f0ff;
+}
+.index-date{
+  float: right;
+}
+.index-title{
+  font-size: 2rem;
+}
+.daily-box{
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+.daily-count{
+  padding: .5rem;
 }
